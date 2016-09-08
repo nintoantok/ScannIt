@@ -12,9 +12,9 @@ public class DummyProducts {
 
         HashMap<String, String> dummyProductList = new HashMap<>();
 
-        dummyProductList.put("02754154" , "Niagra Drinking Water");
-        dummyProductList.put("Dummy Val2" , "Dummy Name2");
-        dummyProductList.put("Dummy Val3" , "Dummy Name3");
+        dummyProductList.put("6297000229027" , "Britin Biscuits");
+        dummyProductList.put("6297000229003" , "Chicken Puffs");
+        dummyProductList.put("6297000229010" , "App Juice");
         //Add Dummy Values
         return dummyProductList;
 

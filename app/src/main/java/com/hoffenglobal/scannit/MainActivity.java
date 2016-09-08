@@ -1,6 +1,7 @@
 package com.hoffenglobal.scannit;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -121,6 +122,8 @@ public class MainActivity extends AppCompatActivity {
             write(file);
             Toast.makeText(this, "Data Exported", Toast.LENGTH_LONG).show();
 
+
+
         } catch (IOException e) {
             e.printStackTrace();
         } catch (WriteException e) {
@@ -186,6 +189,19 @@ public class MainActivity extends AppCompatActivity {
 
         workbook.write();
         workbook.close();
+
+        //Send the mail
+        Uri path = Uri.fromFile(excelFile);
+        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+// set the type to 'email'
+        emailIntent .setType("vnd.android.cursor.dir/email");
+        String to[] = {"sanjaynediyara@gmail.com"};
+        emailIntent .putExtra(Intent.EXTRA_EMAIL, to);
+// the attachment
+        emailIntent .putExtra(Intent.EXTRA_STREAM, path);
+// the mail subject
+        emailIntent .putExtra(Intent.EXTRA_SUBJECT, "Product List");
+        startActivity(Intent.createChooser(emailIntent , "Send email..."));
     }
 
 

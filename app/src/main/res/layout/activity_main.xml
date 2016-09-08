@@ -15,14 +15,12 @@
         android:layout_alignParentTop="true"
         android:orientation="horizontal"
         android:id="@+id/list_menu_layout"
-        android:weightSum="2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <Button
             android:layout_margin="@dimen/activity_vertical_margin"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:text="Clear List"
@@ -37,7 +35,7 @@
             android:layout_weight="1"
             android:textColor="@color/white"
             android:layout_height="wrap_content"
-            android:text="Export List"
+            android:text="Export And Mail"
             android:id="@+id/export_button"
             android:background="@color/colorPrimary"
             android:layout_alignParentLeft="true"
